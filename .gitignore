@@ -1,0 +1,19 @@
+# Backend
+/blog-backend/target/
+/blog-backend/*.log
+/blog-backend/.idea/
+/blog-backend/*.iml
+
+# Frontend
+/blog-frontend/node_modules/
+/blog-frontend/dist/
+/blog-frontend/.vscode/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+
+# Env / secrets
+*.env
+application.properties
+application.yml

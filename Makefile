@@ -18,9 +18,12 @@ clean:
 	docker rm -f $$(docker ps -aq) 2>/dev/null || true
 
 # Run Spring Boot backend with .env variables
-backend:
-	cd $(BACKEND_DIR) && export $$(cat .env | xargs) && mvn spring-boot:run
 
+backend:
+	@echo "Loading .env..."
+	export $$(cat .env | xargs) && \
+	cd $(BACKEND_DIR) && \
+	mvn spring-boot:run
 # Run Angular frontend
 frontend:
 	cd $(FRONTEND_DIR) && npm install && ng serve
